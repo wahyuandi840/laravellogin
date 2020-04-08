@@ -17,6 +17,10 @@ Route::get('/','HomeController@index')->middleware('web');
 
 Route::get('/home','HomeController@index')->middleware('web');
 
+Route::get('/home/dashboard2','HomeController@dashboard2')->middleware('web');
+
+Route::get('/home/permission','HomeController@permission')->middleware('web');
+
 Route::get('/user/login','UserController@login')->middleware('web');
 
 Route::post('/user/login','UserController@login')->middleware('web');

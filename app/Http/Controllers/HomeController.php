@@ -17,4 +17,14 @@ class HomeController extends Controller
 
         return view('home', $data);
     }
+
+    public function permission(Request $request)
+    {
+        return view('permission');
+    }
+
+    public function dashboard2(Request $request)
+    {
+        return view('home2');
+    }
 }

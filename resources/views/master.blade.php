@@ -41,6 +41,7 @@
             <div class="sidebar-nav navbar-collapse">
                 <ul class="nav" id="side-menu">
                     <li><a href="{{ url('/home') }}" title="Home"> Home</a></li>
+                    <li><a href="{{ url('/home/dashboard2') }}" title="Dasboard 2"> Dasboard 2</a></li>
 
                     <li><a href="{{ url('user/logout') }}" title="Logout"> Logout</a></li>
                 </ul>
