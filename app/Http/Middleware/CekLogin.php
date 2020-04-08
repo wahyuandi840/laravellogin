@@ -15,11 +15,19 @@ class CekLogin
      */
     public function handle($request, Closure $next)
     {
-        if(empty($request->session()->get('user_id')) && !$request->is('user/*'))
+        if(empty($request->session()->get('userid')) && !$request->is('user/*'))
         {
             return redirect("user/login");
         }
 
+        if(!empty($request->session()->get('userid')) && $request->is('user/login'))
+        {
+            return redirect("home");
+        }
+
         return $next($request);
     }
+
+
+
 }

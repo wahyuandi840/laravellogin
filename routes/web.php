@@ -13,8 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('master');
-})->middleware("web");
+Route::get('/','HomeController@index')->middleware('web');
 
-Route::get('/user/login','UserController@index');
+Route::get('/home','HomeController@index')->middleware('web');
+
+Route::get('/user/login','UserController@login')->middleware('web');
+
+Route::post('/user/login','UserController@login')->middleware('web');
+
+Route::get('/user/logout','UserController@logout')->middleware('web');

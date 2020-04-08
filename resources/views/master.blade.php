@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Belajar Laravel</title>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link href="{{asset('assets/bower_components/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('assets/bower_components/metisMenu/dist/metisMenu.min.css')}}" rel="stylesheet">
     <link href="{{asset('assets/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css')}}" rel="stylesheet">
@@ -13,7 +14,7 @@
     <link href="{{asset('assets/dist/css/mystyle.css')}}" rel="stylesheet">
     <link href="{{asset('assets/bower_components/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
     <link href="{{asset('assets/js/datetimepicker/bootstrap-datetimepicker.min.css')}}" rel="stylesheet" type="text/css">
-    <script src="{{asset('assets/js/jquery-2.1.1.min.j')}}"></script>
+    <script src="{{asset('assets/js/jquery-2.1.1.min.js')}}"></script>
     <script src="{{asset('assets/js/chart.js')}}"></script>
     <script src="{{asset('assets/bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
     <script src="{{asset('assets/bower_components/metisMenu/dist/metisMenu.min.js')}}"></script>
@@ -39,7 +40,7 @@
         <div class="navbar-default sidebar" role="navigation">
             <div class="sidebar-nav navbar-collapse">
                 <ul class="nav" id="side-menu">
-                    <li><a href="{{ url('user') }}" title="Home"> Home</a></li>
+                    <li><a href="{{ url('/home') }}" title="Home"> Home</a></li>
 
                     <li><a href="{{ url('user/logout') }}" title="Logout"> Logout</a></li>
                 </ul>
