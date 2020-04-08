@@ -19,7 +19,7 @@ class CekLogin
         {
             return redirect("user/login");
         }
-        
+
         return $next($request);
     }
 }
